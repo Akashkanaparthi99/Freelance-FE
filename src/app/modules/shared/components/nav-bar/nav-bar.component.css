@@ -1,0 +1,20 @@
+.home-button{
+    color: #08d123;
+    font-weight: 800;
+    font-size:larger;
+    
+}
+.mat-raised-button{
+    border-radius: 20px;
+    margin: 3px;
+   
+}
+.mat-elevation-z6{
+    background-color:#129c00;
+    color: #fff;
+    height: 46px;
+}
+
+.cat-button{
+    font-size:12px;
+}
