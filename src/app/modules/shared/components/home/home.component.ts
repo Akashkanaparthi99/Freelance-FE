@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/models/category';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+ 
+  categories!: Category[];
+  constructor(private _sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this._sharedService.getCategories().subscribe(
+      {
+        next: (data) => this.categories = data,
+      }
+    );
   }
 
 }

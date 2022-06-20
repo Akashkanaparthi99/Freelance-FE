@@ -1,4 +1,4 @@
-
+<div>
 <mat-toolbar class="header">
     <svg xmlns="http://www.w3.org/2000/svg" width="55px" height="55px" viewBox="0 0 72 72">
         <g fill="none" fill-rule="evenodd">
@@ -18,11 +18,14 @@
     <button mat-raised-button [routerLink]="['signup']" routerLinkActive="true" [ngStyle]="{ 'border': '1.5px solid #08d123'}">Sign Up </button>
     <button mat-raised-button [routerLink]="['login']" routerLinkActive="true" [ngStyle]="{'background-color':'#08d123','color':'#fff'}">Login</button>
 </mat-toolbar>
-
-
-<mat-toolbar class="mat-elevation-z6">
-    <div *ngFor="let category of categories">
-        <button class="cat-button" mat-button [routerLink]="['category',category]" routerLinkActive="true">{{category}}</button>
+<!-- <mat-toolbar class="mat-elevation-z6">
+    <div *ngFor="let category of categories" class="nav-bar-category">
+        <button class="cat-button" mat-button [routerLink]="['/category',category.categoryType]" routerLinkActive="true">{{category.categoryType}}</button>
     </div>
-</mat-toolbar>
+
+</mat-toolbar> -->
 <router-outlet></router-outlet>
+</div>
+<div class="footer" >
+    Follow Us : 
+</div>

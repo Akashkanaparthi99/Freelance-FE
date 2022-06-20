@@ -3,12 +3,11 @@ import { Category } from 'src/app/models/category';
 import { SharedService } from '../../services/shared.service';
 
 @Component({
- 
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: 'app-category',
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class CategoryComponent implements OnInit {
 
   categories!: Category[];
   constructor(private _sharedService: SharedService) { }
@@ -20,6 +19,5 @@ export class NavBarComponent implements OnInit {
       }
     );
   }
-
 
 }

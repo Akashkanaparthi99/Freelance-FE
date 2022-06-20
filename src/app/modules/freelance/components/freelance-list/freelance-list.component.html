@@ -1,1 +1,18 @@
-<p>freelance-list works!</p>
+<div class="container">
+<mat-card *ngFor="let freelancer of freelancers">
+    <mat-card-header>
+        <div mat-card-avatar>avatar</div>
+        <mat-card-title>{{freelancer.freelancerName | titlecase}}</mat-card-title>
+        <mat-card-subtitle>{{freelancer.rating}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <mat-card-content>
+        content
+    </mat-card-content> -->
+    <mat-card-actions>
+        <!-- <button mat-raised-button [routerLink]="['/freelance-details',freelancer.freelancerId]" routerLinkActive="router-link-active">actionOne</button> -->
+        <button mat-stroked-button (click)="onClick(freelancer)">View Details</button>
+        </mat-card-actions>
+</mat-card>
+</div>
+
+<!-- (click)="onClick(freelancer)" -->

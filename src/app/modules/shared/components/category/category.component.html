@@ -1,0 +1,7 @@
+<p>category works!</p>
+<mat-toolbar class="mat-elevation-z6">
+    <div *ngFor="let category of categories" class="nav-bar-category">
+        <button class="cat-button" mat-button [routerLink]="['category',category.categoryType]" routerLinkActive="true">{{category.categoryType}}</button>
+    </div>
+
+</mat-toolbar>

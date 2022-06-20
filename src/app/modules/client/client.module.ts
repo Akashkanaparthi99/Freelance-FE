@@ -6,6 +6,7 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { ClientDetailsComponent } from './components/client-details/client-details.component';
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { MaterialModule } from '../shared/material/material.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     ClientRoutingModule
   ]
 })

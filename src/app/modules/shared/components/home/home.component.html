@@ -1,1 +1,44 @@
-<p>home works!</p>
+
+
+<div class="home-main">
+    <mat-toolbar class="mat-elevation-z6">
+        <div *ngFor="let category of categories" class="nav-bar-category">
+            <button class="cat-button" mat-button [routerLink]="['/category',category.categoryType]" routerLinkActive="true">{{category.categoryType}}</button>
+        </div>
+    </mat-toolbar>
+    <div class="inner-div">
+<div class ="row-1">
+    <!-- <img  mat-card-image src="../../assets/images/home/home1.jpg" alt="Home" [ngStyle]="{'height': '500px','width': 'auto'}"/> -->
+    <h1>WorkMate Welcome's You </h1>
+    <br>
+    <button mat-raised-button [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active">
+        Find Freelancers
+    </button>
+    <button mat-raised-button [routerLink]="['/category']" routerLinkActive="router-link-active">
+        Find Work
+    </button>
+</div>
+</div>
+<div class="inner-div">
+<div class="client-div">
+    <span>for Clients</span><br>
+    <div class="client-row">
+        <button mat-raised-button [routerLink]="['/']" routerLinkActive="router-link-active">
+        Post a Project
+        </button>
+        <button mat-raised-button [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active" >
+        Find a Pro 
+        </button>
+    </div>
+</div>
+</div>
+<div class="inner-div">
+<div class="freelance-div">
+    for Freelancers
+    <button mat-raised-button [routerLink]="['/project-list']" routerLinkActive="router-link-active">
+        find Opportunity
+    </button>
+    
+</div>
+</div>
+</div>
