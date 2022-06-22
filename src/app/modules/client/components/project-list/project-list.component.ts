@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { ClientService } from '../../services/client.service';
 
@@ -9,11 +11,18 @@ import { ClientService } from '../../services/client.service';
 })
 export class ProjectListComponent implements OnInit {
 
+  category: string = '';
   projects!:Project[];
-  constructor(private _clientService: ClientService) { }
+  constructor(private _clientService: ClientService,private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this._clientService.getProjects().subscribe({
+
+    this._activatedRoute.paramMap.subscribe(map => {
+      let category = map.get('name');
+      if (category)
+        this.category = category;
+    });
+    this._clientService.getByCategory(this.category).subscribe({
         next: (data) => this.projects = data,
       })
   }

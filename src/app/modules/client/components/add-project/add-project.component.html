@@ -1,0 +1,48 @@
+<div class="form-group">
+<form #projectForm="ngForm" (ngSubmit)="addProject(projectForm)" class="form-control">
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Project Name</mat-label>
+      <input matInput placeholder="Enter Project Name" type="text" name="projectName" #projectName="ngModel" ngModel>
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+      <mat-hint></mat-hint>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Budget</mat-label>
+      <input matInput placeholder="Enter budget" type="text" name="budget" #budget ngModel>
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+      <mat-hint>in .Rs/-</mat-hint>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Duration</mat-label>
+      <input matInput placeholder="Enter duartion" type="text" name="duration" #duration ngModel>
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+      <mat-hint>(hrs,days,weeks,months)</mat-hint>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="outline">
+      <mat-label>Project Category</mat-label>
+      <mat-select name = "project_category">
+        <mat-option *ngFor = "let category of categories" value="{{category.categoryType}}"  >{{category.categoryType | titlecase}}</mat-option>
+        
+      </mat-select>
+      <mat-hint>only one category</mat-hint>
+    </mat-form-field>
+</p>
+
+<p>
+    <mat-form-field appearance="outline">
+        <mat-label>Details : </mat-label>
+        <textarea matInput placeholder="Enter Here" name="details" #details ngModel></textarea>
+    </mat-form-field>
+</p>
+<button mat-raised-button>Add Project</button>
+</form>
+</div>
+
+<!-- (click)="addProject(projectForm)" -->

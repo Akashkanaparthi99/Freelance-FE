@@ -10,7 +10,7 @@ export interface Category {
     // SALES="Sales & Marketing",
     // WRITING="Writing & Translation"
 
-    categoryId: number;
+    // categoryId: number;
     categoryType: string;
     // subCategories: SubCategory[];
 }

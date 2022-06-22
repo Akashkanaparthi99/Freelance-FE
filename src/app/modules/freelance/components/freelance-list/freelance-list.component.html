@@ -1,18 +1,56 @@
-<div class="container">
-<mat-card *ngFor="let freelancer of freelancers">
-    <mat-card-header>
-        <div mat-card-avatar>avatar</div>
-        <mat-card-title>{{freelancer.freelancerName | titlecase}}</mat-card-title>
-        <mat-card-subtitle>{{freelancer.rating}}</mat-card-subtitle>
-    </mat-card-header>
-    <!-- <mat-card-content>
-        content
-    </mat-card-content> -->
-    <mat-card-actions>
-        <!-- <button mat-raised-button [routerLink]="['/freelance-details',freelancer.freelancerId]" routerLinkActive="router-link-active">actionOne</button> -->
-        <button mat-stroked-button (click)="onClick(freelancer)">View Details</button>
-        </mat-card-actions>
-</mat-card>
+<div>
+    <mat-sidenav-container >
+        
+        <mat-sidenav #sidenav class="mat-elevation-z4" mode="side" opened="true">
+            Filter :
+            <mat-nav-list>
+                <mat-list-item *ngFor="let item of choices " >
+                    <!-- <mat-icon matListIcon>{{item}}</mat-icon> -->
+                    <h3 matLine>{{item}}</h3>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-sidenav>        
+    </mat-sidenav-container>
 </div>
 
-<!-- (click)="onClick(freelancer)" -->
+
+<!-- 
+DRAWER container
+ -->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-nav-list>
+        <mat-list-item *ngFor="let item of choices " >
+            <button mat-flat-button (click)="showFiller(item)" [matMenuTriggerFor]="menu">
+                {{item | uppercase}}
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item *ngFor="let dat of value" (click) ="getFilter(item,dat)">{{dat}}</button>
+            </mat-menu>
+</mat-list-item>
+    </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        
+      <button type="button" mat-stroked-button (click)="drawer.toggle()">
+        Click to Filter : 
+      </button>
+    </div>
+    <div class="container">
+        <mat-card *ngFor="let freelancer of freelancers">
+            <mat-card-header>
+                <div mat-card-avatar>avatar</div>
+                <mat-card-title>{{freelancer.freelancerName | titlecase}}</mat-card-title>
+                <mat-card-subtitle>{{freelancer.rating}}</mat-card-subtitle>
+            </mat-card-header>
+            <!-- <mat-card-content>
+                content
+            </mat-card-content> -->
+            <mat-card-actions>
+                <!-- <button mat-raised-button [routerLink]="['/freelance-details',freelancer.freelancerId]" routerLinkActive="router-link-active">actionOne</button> -->
+                <button mat-stroked-button (click)="onClick(freelancer)">View Details</button>
+                </mat-card-actions>
+        </mat-card>
+        </div>
+  </mat-drawer-container>

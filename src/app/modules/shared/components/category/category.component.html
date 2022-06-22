@@ -1,7 +1,8 @@
-<p>category works!</p>
-<mat-toolbar class="mat-elevation-z6">
+<body>
+<div class="container">
     <div *ngFor="let category of categories" class="nav-bar-category">
-        <button class="cat-button" mat-button [routerLink]="['category',category.categoryType]" routerLinkActive="true">{{category.categoryType}}</button>
+        <button mat-flat-button (click)="onClick(category.categoryType)" >{{category.categoryType | uppercase }}</button>
     </div>
 
-</mat-toolbar>
+</div>
+</body>

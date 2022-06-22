@@ -11,7 +11,8 @@ width: 100%;
     background-image: url(/assets/images/home/home1.jpg);
 width: 950px;
 height: 582px;
-background-size: contain;
+background-size: cover;
+color: #fff;
 
 /* background: url('https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2147&q=80') ; */
     
@@ -19,8 +20,8 @@ background-size: contain;
 .client-div{
     width: 950px;
     height: 582px;
-    background-size: contain;
-
+    background-size: cover;
+    background-image: url(/assets/images/home/home2.jpg);
     padding: auto;
     background-color: #3B87FA;
     border-radius: 10px;
@@ -29,12 +30,13 @@ background-size: contain;
 .freelance-div{
     width: 950px;
 height: 582px;
-background-size: contain;
+background-size: cover;
 margin-bottom: 50px;
     padding: auto;
     background-color: #08d123;
     border-radius: 10px;
     color: white;
+    background-image: url(/assets/images/home/home3.jpg);
 }
 .client-row{
     display: flex;

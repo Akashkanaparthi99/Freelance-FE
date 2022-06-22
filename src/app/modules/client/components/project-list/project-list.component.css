@@ -1,0 +1,15 @@
+.form-control{
+    box-shadow: 0 3px 6px rgba(7, 114, 1, 0.499), 0 3px 6px rgba(9, 135, 32, 0.23);
+    width: 1000px;
+    height: auto;
+}
+
+div{
+    align-items: center;
+    display: grid;
+    justify-items: center;
+}
+.mat-card{
+    margin: 12px;
+    border-radius: 7px;
+}

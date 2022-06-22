@@ -4,7 +4,6 @@ import { FreelanceDetailsComponent } from './components/freelance-details/freela
 import { FreelanceListComponent } from './components/freelance-list/freelance-list.component';
 
 const routes: Routes = [
-  // {path: 'freelance-list', component: FreelanceListComponent},
   {path: 'freelance-details/:id', component: FreelanceDetailsComponent}
 ];
 

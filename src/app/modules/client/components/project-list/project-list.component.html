@@ -1,5 +1,5 @@
-
-<mat-card *ngFor="let project of projects">
+<div>
+<mat-card *ngFor="let project of projects" class="form-control">
     <mat-card-header>
         <mat-card-title>{{project.projectName}}</mat-card-title>
         <mat-card-subtitle>{{project.projectCategory}}</mat-card-subtitle>
@@ -8,6 +8,14 @@
         {{project.details}}
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>actionOne</button>
+        <button 
+        mat-raised-button 
+        [routerLink]="['/project-details',project.projectId]" 
+        routerLinkActive="router-link-active" 
+        [ngStyle]="{'background-color':'#08d123','color':'#fff'}"
+        >View Details
+    </button>
     </mat-card-actions>
 </mat-card>
+
+</div>

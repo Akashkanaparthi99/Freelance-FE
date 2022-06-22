@@ -7,6 +7,8 @@ import { ClientDetailsComponent } from './components/client-details/client-detai
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { MaterialModule } from '../shared/material/material.module';
+import { AddProjectComponent } from './components/add-project/add-project.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,10 +16,12 @@ import { MaterialModule } from '../shared/material/material.module';
     ClientListComponent,
     ClientDetailsComponent,
     ProjectListComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    AddProjectComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MaterialModule,
     ClientRoutingModule
   ]

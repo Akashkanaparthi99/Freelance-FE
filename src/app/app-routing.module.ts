@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/auth/components/login/login.component';
 import { SignupComponent } from './modules/auth/components/signup/signup.component';
+import { AddProjectComponent } from './modules/client/components/add-project/add-project.component';
 import { ClientListComponent } from './modules/client/components/client-list/client-list.component';
 import { ProjectListComponent } from './modules/client/components/project-list/project-list.component';
 import { FreelanceListComponent } from './modules/freelance/components/freelance-list/freelance-list.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
   { path: 'category/:name', component: ProjectListComponent },
-  {path: 'category', component:CategoryComponent},
+  { path: 'category', component: CategoryComponent },
+  {path: 'add-project', component: AddProjectComponent},
   {
     path: 'freelancer-list', component: FreelanceListComponent
   },
