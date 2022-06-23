@@ -8,7 +8,7 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { AddProjectComponent } from './components/add-project/add-project.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     ClientRoutingModule
   ]

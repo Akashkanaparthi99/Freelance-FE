@@ -50,4 +50,11 @@ export class FreelanceService {
   // getByTypeAndValue = (type: string, value: string): Observable<Freelance[]> => { 
   //   return this._httpClient.get<Freelance[]>(this._baseUrl.concat(
   // }
+
+  getCategoriesById = (id: number): Observable<string[]> => { 
+    return this._httpClient.get<string[]>(this._baseUrl.concat("/cat-by-id/" + id));
+  }
+  getSkillsById = (id: number): Observable<string[]> => { 
+    return this._httpClient.get<string[]>(this._baseUrl.concat("/skill-by-id/" + id));
+  }
 }

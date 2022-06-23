@@ -7,37 +7,67 @@
         </div>
     </mat-toolbar>
     <div class="inner-div">
+        
 <div class ="row-1">
-    <!-- <img  mat-card-image src="../../assets/images/home/home1.jpg" alt="Home" [ngStyle]="{'height': '500px','width': 'auto'}"/> -->
-    <h1>WorkMate Welcome's You </h1>
+    <div class="col-title">
+        <h1>WorkMate Welcome's You </h1>
+        <h1>How work</h1>
+        <h1>should work</h1>
+        <p>
+Forget the old rules. You can have the
+best people. Right now. Right here.
+</p>    
+</div>
     <br>
-    <button mat-raised-button [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active">
+    <div class="col-md-button">
+        <div class="button" [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active">
         Find Freelancers
-    </button>
-    <button mat-raised-button [routerLink]="['/category']" routerLinkActive="router-link-active">
+        </div>
+        <div class="button" [routerLink]="['/category']" routerLinkActive="router-link-active">
         Find Work
-    </button>
+        </div>
+    </div>
 </div>
 </div>
 <div class="inner-div">
 <div class="client-div">
-    <span>for Clients</span><br>
-    <div class="client-row">
-        <button mat-raised-button [routerLink]="['/add-project']" routerLinkActive="router-link-active">
+    <div class="col-title">
+        for Clients
+        <h1>Find talent</h1>
+        <h1>your way</h1>
+        <p>
+Work with the largest network of independent professionals and get things done—from quick turnarounds to big transformations.
+</p>
+    </div><br>
+    <div class="col-md-button">
+        <div class="c-button"  mat-raised-button [routerLink]="['/add-project']" routerLinkActive="router-link-active">
         Post a Project
-        </button>
-        <button mat-raised-button [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active" >
-        Find a Pro 
-        </button>
+        </div>
+        <div class="c-button"  mat-raised-button [routerLink]="['/freelancer-list']" routerLinkActive="router-link-active" >
+            Let us help you to find the right talent
+        </div>
     </div>
 </div>
 </div>
 <div class="inner-div">
 <div class="freelance-div">
-    for Freelancers
-    <button mat-raised-button [routerLink]="['/category']" routerLinkActive="router-link-active">
-        find Opportunity
-    </button>
+    <div class="col-title">
+        for Freelancers
+
+        <h1>Find great work</h1>
+        <p>Meet clients you’re excited to work with and take
+            your career or business to new heights.</p>
+<h3>Find opportunities for every stage of your freelance career</h3>
+<h3>Control when, where, and how you work</h3>
+<h3>Explore different ways to earn</h3>
+
+
+
+    </div>
+    
+    <div class="f-button"  mat-raised-button [routerLink]="['/category']" routerLinkActive="router-link-active">
+        Find Opportunity
+    </div>
     
 </div>
 </div>

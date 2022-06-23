@@ -1,3 +1,4 @@
+import { Category } from "./category";
 import { ContactDetails } from "./contact-details";
 
 export interface Freelance {
@@ -6,6 +7,6 @@ export interface Freelance {
     noOfProjects:number;
     rating:number;
     contactDetails:ContactDetails;
-    category:string[];
+    category:Category[];
     skills:string[];
 }

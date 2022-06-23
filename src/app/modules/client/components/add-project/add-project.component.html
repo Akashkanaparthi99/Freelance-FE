@@ -1,9 +1,11 @@
 <div class="form-group">
-<form #projectForm="ngForm" (ngSubmit)="addProject(projectForm)" class="form-control">
+    <div class="col-form-group">
+        <h2>Project Form</h2>
+<form [formGroup]="projectForm" (ngSubmit)="addProject(projectForm)" class="form-control">
 <p>
     <mat-form-field appearance="outline">
       <mat-label>Project Name</mat-label>
-      <input matInput placeholder="Enter Project Name" type="text" name="projectName" #projectName="ngModel" ngModel>
+      <input matInput placeholder="Enter Project Name" type="text" formControlName="projectName">
       <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
       <mat-hint></mat-hint>
     </mat-form-field>
@@ -11,7 +13,7 @@
 <p>
     <mat-form-field appearance="outline">
       <mat-label>Budget</mat-label>
-      <input matInput placeholder="Enter budget" type="text" name="budget" #budget ngModel>
+      <input matInput placeholder="Enter budget" type="text" formControlName="budget">
       <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
       <mat-hint>in .Rs/-</mat-hint>
     </mat-form-field>
@@ -19,7 +21,7 @@
 <p>
     <mat-form-field appearance="outline">
       <mat-label>Duration</mat-label>
-      <input matInput placeholder="Enter duartion" type="text" name="duration" #duration ngModel>
+      <input matInput placeholder="Enter duartion" type="text"  formControlName="duration">
       <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
       <mat-hint>(hrs,days,weeks,months)</mat-hint>
     </mat-form-field>
@@ -27,8 +29,8 @@
 <p>
     <mat-form-field appearance="outline">
       <mat-label>Project Category</mat-label>
-      <mat-select name = "project_category">
-        <mat-option *ngFor = "let category of categories" value="{{category.categoryType}}"  >{{category.categoryType | titlecase}}</mat-option>
+      <mat-select  formControlName="projectCategory">
+        <mat-option *ngFor = "let category of categories" value="{{category.categoryType}}">{{category.categoryType | titlecase}}</mat-option>
         
       </mat-select>
       <mat-hint>only one category</mat-hint>
@@ -38,11 +40,14 @@
 <p>
     <mat-form-field appearance="outline">
         <mat-label>Details : </mat-label>
-        <textarea matInput placeholder="Enter Here" name="details" #details ngModel></textarea>
+        <textarea matInput placeholder="Enter Here" formControlName="details"></textarea>
     </mat-form-field>
 </p>
-<button mat-raised-button>Add Project</button>
+<span class="mat-filler">
+    <button mat-raised-button [ngStyle]="{'background-color': '#08d123' ,'color':'#fff'}">Add Project</button>
+</span>
 </form>
+    </div>
 </div>
 
 <!-- (click)="addProject(projectForm)" -->

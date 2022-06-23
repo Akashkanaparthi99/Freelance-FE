@@ -1,2 +1,23 @@
-<p>freelance-details works!</p>
-<h2>{{freelance|json}}</h2>
+
+<mat-card *ngIf = 'freelance' class="card-d">
+        <img src="..\..\assets\images\freelancers\man.png" class="img-responsive" alt="" />
+        <div>
+    <mat-card-header>
+        
+        
+        <mat-card-title> {{freelance.freelancerName | titlecase}}</mat-card-title>
+        <mat-card-subtitle>rating : <h3>{{freelance.rating}}</h3></mat-card-subtitle>
+        
+        <mat-card-subtitle>Specialised in :</mat-card-subtitle>
+        <mat-card-title *ngFor = "let category of categories">{{category}}</mat-card-title>
+        <mat-card-subtitle>Skills in :</mat-card-subtitle>
+        <mat-card-title *ngFor = "let skill of skills">{{skill}}</mat-card-title>
+        <mat-card-subtitle>No of Projects done : </mat-card-subtitle>
+        <mat-card-title>{{freelance.noOfProjects}}</mat-card-title>
+        <mat-card-subtitle>Contact information :</mat-card-subtitle>
+        <mat-card-title>E-mail : {{freelance.contactDetails.email}}</mat-card-title>
+        <mat-card-title>City : {{freelance.contactDetails.city}}</mat-card-title>
+        <mat-card-title>State : {{freelance.contactDetails.state}}</mat-card-title>
+    </mat-card-header>
+    </div>
+</mat-card>

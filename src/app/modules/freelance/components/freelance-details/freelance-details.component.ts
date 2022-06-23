@@ -12,6 +12,9 @@ export class FreelanceDetailsComponent implements OnInit {
 
   freelanceId: number = 0;
   freelance!: Freelance;
+  categories: string[] = [];
+  skills: string[]= [];
+  
   constructor(private _activatedRoute: ActivatedRoute,private _freelanceService: FreelanceService) { }
 
   ngOnInit(): void {
@@ -24,6 +27,12 @@ export class FreelanceDetailsComponent implements OnInit {
 
     this._freelanceService.getById(this.freelanceId).subscribe({
       next: (data) => { this.freelance = data; }
+    })
+    this._freelanceService.getCategoriesById(this.freelanceId).subscribe({
+      next: (data) => { this.categories = data; }
+    })
+    this._freelanceService.getSkillsById(this.freelanceId).subscribe({
+      next: (data) => { this.skills = data; }
     })
   }
 

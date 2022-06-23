@@ -1,10 +1,35 @@
 .form-group{
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-control{
     margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.col-form-group{
+    border-radius: 8px;
+    border: #08d123 solid 2.5px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.253), 0 5px 15px rgba(0, 0, 0, 0.242);
+}
+.mat-filler{
+    padding-left: 45px;
+}
+
+h2{
+    font-family: 'Cinzel', serif;
+    font-size: xx-large;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.708);
 }
