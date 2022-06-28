@@ -34,7 +34,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatRippleModule } from '@angular/material/core';
 // Material Popups & Modals
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule ,MatDialog} from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 // Material Data tables
@@ -42,83 +42,58 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
+const materialModules = [
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatListModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatTreeModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatBadgeModule,
+  MatChipsModule,
+  MatIconModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatRippleModule,
+  MatBottomSheetModule,
+  MatDialogModule,
+  MatSnackBarModule,
+  MatTooltipModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTableModule,
+  
+  // 
+]
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MatAutocompleteModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatListModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatTreeModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatBadgeModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatRippleModule,
-    MatBottomSheetModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatTooltipModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTableModule
+    ...materialModules
   ],
   exports: [
-    MatAutocompleteModule,
-    MatCheckboxModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatListModule,
-    MatStepperModule,
-    MatTabsModule,
-    MatTreeModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatBadgeModule,
-    MatChipsModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatRippleModule,
-    MatBottomSheetModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatTooltipModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTableModule
+   ...materialModules
+  ],
+  providers: [
+    MatDialog,
+   
   ]
 })
 export class MaterialModule { }

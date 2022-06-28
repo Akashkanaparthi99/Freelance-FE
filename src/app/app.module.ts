@@ -14,7 +14,7 @@ import { FreelanceModule } from './modules/freelance/freelance.module';
 import { ClientModule } from './modules/client/client.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CategoryComponent } from './modules/shared/components/category/category.component';
-
+import { MatDialog} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -27,15 +27,17 @@ import { CategoryComponent } from './modules/shared/components/category/category
   imports: [
     BrowserModule,
     FreelanceModule,
-    ClientModule,
-    AuthModule,
+   
+    AuthModule, ClientModule,
     HttpClientModule,
     FormsModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    MatDialog
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
